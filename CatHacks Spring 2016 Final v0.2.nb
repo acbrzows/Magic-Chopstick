@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     41482,       1069]
-NotebookOptionsPosition[     40772,       1043]
-NotebookOutlinePosition[     41128,       1059]
-CellTagsIndexPosition[     41085,       1056]
+NotebookDataLength[     43425,       1117]
+NotebookOptionsPosition[     42674,       1090]
+NotebookOutlinePosition[     43029,       1106]
+CellTagsIndexPosition[     42986,       1103]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -262,6 +262,44 @@ Cell[BoxData[{
     "]"}]}], ";"}], "\n", 
  RowBox[{
   RowBox[{
+   RowBox[{"Fit2D", "[", "points_", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "fitFunction", "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"fitFunction", "=", 
+       RowBox[{"Fit", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"Take", "[", 
+            RowBox[{"#", ",", "2"}], "]"}], "&"}], "/@", "points"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "x", ",", 
+           RowBox[{"x", "^", "2"}], ",", 
+           RowBox[{"x", "^", "3"}], ",", 
+           RowBox[{"x", "^", "4"}], ",", 
+           RowBox[{"x", "^", "5"}], ",", 
+           RowBox[{"x", "^", "6"}], ",", 
+           RowBox[{"x", "^", "7"}], ",", 
+           RowBox[{"x", "^", "8"}], ",", 
+           RowBox[{"x", "^", "9"}], ",", 
+           RowBox[{"x", "^", "10"}]}], "}"}], ",", "x"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Show", "[", 
+       RowBox[{
+        RowBox[{"ListPlot", "[", 
+         RowBox[{"points", ",", " ", 
+          RowBox[{"PlotStyle", "\[Rule]", "Red"}]}], "]"}], ",", " ", 
+        RowBox[{"Plot", "[", 
+         RowBox[{
+          RowBox[{"{", "fitFunction", "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{"x", ",", " ", 
+            RowBox[{"-", "150"}], ",", " ", "150"}], "}"}]}], "]"}]}], 
+       "]"}]}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
    RowBox[{"DrawSignature", "[", "]"}], ":=", 
    RowBox[{"Module", "[", 
     RowBox[{
@@ -391,8 +429,7 @@ Cell[BoxData[{
              RowBox[{"{", 
               RowBox[{"0", ",", "0", ",", "4"}], "}"}]}]}], "}"}]}], "]"}], 
         ",", 
-        RowBox[{"ImageSize", "\[Rule]", 
-         RowBox[{"Scaled", "[", "0.8", "]"}]}]}], "]"}]}]}], "]"}]}], 
+        RowBox[{"ImageSize", "\[Rule]", "Large"}]}], "]"}]}]}], "]"}]}], 
   ";"}], "\n", 
  RowBox[{
   RowBox[{
@@ -463,8 +500,7 @@ Cell[BoxData[{
              RowBox[{"{", 
               RowBox[{"0", ",", "0", ",", "4"}], "}"}]}]}], "}"}]}], "]"}], 
         ",", 
-        RowBox[{"ImageSize", "\[Rule]", 
-         RowBox[{"Scaled", "[", "0.8", "]"}]}]}], "]"}]}]}], "]"}]}], 
+        RowBox[{"ImageSize", "\[Rule]", "Large"}]}], "]"}]}]}], "]"}]}], 
   ";"}], "\n", 
  RowBox[{
   RowBox[{
@@ -523,8 +559,7 @@ Cell[BoxData[{
              RowBox[{"{", 
               RowBox[{"0", ",", "0", ",", "1000"}], "}"}]}]}], "}"}]}], "]"}],
          ",", 
-        RowBox[{"ImageSize", "\[Rule]", 
-         RowBox[{"Scaled", "[", "0.8", "]"}]}]}], "]"}]}]}], "]"}]}], 
+        RowBox[{"ImageSize", "\[Rule]", "Large"}]}], "]"}]}]}], "]"}]}], 
   ";"}], "\n", 
  RowBox[{
   RowBox[{
@@ -988,12 +1023,17 @@ Cell[BoxData[{
    3.669302379740744*^9}, {3.6693037117363663`*^9, 3.669303735103108*^9}, {
    3.669303792011147*^9, 3.6693037929553547`*^9}, {3.669303825072393*^9, 
    3.669303826608288*^9}, {3.6693038693167963`*^9, 3.66930390993423*^9}, {
-   3.669304417180238*^9, 3.6693044311370983`*^9}}],
+   3.669304417180238*^9, 3.6693044311370983`*^9}, {3.6693057362192993`*^9, 
+   3.669305793409926*^9}, {3.6693058652763367`*^9, 3.669305904116878*^9}, {
+   3.669305939094727*^9, 3.669306015696191*^9}, {3.669306057888433*^9, 
+   3.6693061228881187`*^9}, {3.669306163963409*^9, 3.669306164129703*^9}, {
+   3.6693097669528522`*^9, 3.6693097913317947`*^9}}],
 
 Cell[BoxData[
  RowBox[{"Prepare3D", "[", "]"}]], "Input",
  CellChangeTimes->{{3.669273557761134*^9, 3.66927356095261*^9}, 
-   3.669273645975135*^9, {3.669275134146267*^9, 3.669275134522029*^9}}],
+   3.669273645975135*^9, {3.669275134146267*^9, 3.669275134522029*^9}, 
+   3.669426875951576*^9}],
 
 Cell[BoxData[
  RowBox[{"Draw3D", "[", "]"}]], "Input",
@@ -1039,10 +1079,17 @@ Cell[TextData[{
  " Using JLink\n",
  "http://community.wolfram.com/groups/-/m/t/90931"
 }], "Text",
- CellChangeTimes->{{3.669305017852512*^9, 3.669305061744117*^9}}]
+ CellChangeTimes->{{3.669305017852512*^9, 3.669305061744117*^9}}],
+
+Cell["\<\
+We can also use the final graphic created with Draw3D, export it to an STL \
+file, visualize it with MeshLab, and then send it to a 3D printer.\
+\>", "Text",
+ CellChangeTimes->{{3.6694266297892437`*^9, 3.6694266575885363`*^9}, {
+  3.66942692930904*^9, 3.669426930123604*^9}}]
 },
-WindowSize->{1080, 1875},
-WindowMargins->{{0, Automatic}, {Automatic, -1}},
+WindowSize->{Full, Full},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
 FrontEndVersion->"10.1 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 23, \
 2015)",
 StyleDefinitions->"Default.nb"
@@ -1058,19 +1105,20 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 38286, 970, 19, "Input",
+Cell[558, 20, 39874, 1009, 19, "Input",
  CellOpen->False,
  CellGroupingRules->{GroupTogetherGrouping, 10000.},
  InitializationCell->True],
-Cell[38847, 992, 194, 3, 28, "Input"],
-Cell[39044, 997, 120, 2, 28, "Input"],
-Cell[39167, 1001, 123, 2, 28, "Input"],
-Cell[39293, 1005, 118, 2, 28, "Input"],
-Cell[39414, 1009, 488, 8, 28, "Input"],
-Cell[39905, 1019, 189, 3, 28, "Input"],
-Cell[40097, 1024, 98, 2, 28, "Input"],
-Cell[40198, 1028, 293, 4, 28, "Input"],
-Cell[40494, 1034, 274, 7, 106, "Text"]
+Cell[40435, 1031, 220, 4, 28, "Input"],
+Cell[40658, 1037, 120, 2, 28, "Input"],
+Cell[40781, 1041, 123, 2, 28, "Input"],
+Cell[40907, 1045, 118, 2, 28, "Input"],
+Cell[41028, 1049, 488, 8, 28, "Input"],
+Cell[41519, 1059, 189, 3, 28, "Input"],
+Cell[41711, 1064, 98, 2, 28, "Input"],
+Cell[41812, 1068, 293, 4, 28, "Input"],
+Cell[42108, 1074, 274, 7, 106, "Text"],
+Cell[42385, 1083, 285, 5, 30, "Text"]
 }
 ]
 *)
